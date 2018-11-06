@@ -40,8 +40,30 @@ interval; "False" would give the opposite endpoint arrangement.)
     L.writeout()
     
 ### examples    
+
+Run from console 
+
+```bash
+cd examples 
+python lami1.py
+```
     
-    
+![lami1.png](examples/lami1.png)      
+
+![lami2.png](examples/lami2.png)  
+
+![lami3.png](examples/lami3.png)  
+
+
+![lami4.png](examples/lami4.png)  
+
+![lami5.png](examples/lami5.png)  
+
+![qml.png](examples/qml.png)  
+
+
+
+
 ### regular examples
 
 Run from console 
