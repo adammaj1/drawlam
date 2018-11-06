@@ -59,7 +59,7 @@ python lami1.py
 
 ![lami5.png](examples/lami5.png)  
 
-![qml.png](examples/qml.png)  
+![qml.png](examples/qml.pdf)  
 
 
 
