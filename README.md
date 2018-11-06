@@ -8,6 +8,14 @@ producing PNG and PDF output.
 
 This library calls upon [PyCairo][1] and [gmpy][2] for its dark deeds.
 
+
+
+In ubuntu:
+
+```bash
+pip2 install gmpy --user
+```
+
 ## Usage
 
 DrawLam.py is designed to be used in Python scripts.  There are
@@ -30,6 +38,37 @@ interval; "False" would give the opposite endpoint arrangement.)
     L.start()
     L.iterative_preimages((mpq(1,7), mpq(2,7)), 10)
     L.writeout()
+    
+### examples    
+    
+    
+### regular examples
+
+Run from console 
+
+```bash
+cd regular_examples 
+python lami2.py
+```
+
+
+![lami2.png](lami2.png)  
+
+![lami3.png](lami3.png)  
+
+
+![lami4.png](lami4.png)  
+
+![lami5.png](lami5.png)  
+
+![lami6.png](lami6.png)  
+
+![lami7.png](lami7.png)  
+
+
+![lami8.png](lami8.png)  
+
+![lami9.png](lami9.png)  
 
 ## License
 
