@@ -52,23 +52,23 @@ python lami2.py
 ```
 
 
-![lami2.png](lami2.png)  
+![lami2.png](regular_examples /lami2.png)  
 
-![lami3.png](lami3.png)  
-
-
-![lami4.png](lami4.png)  
-
-![lami5.png](lami5.png)  
-
-![lami6.png](lami6.png)  
-
-![lami7.png](lami7.png)  
+![lami3.png](regular_examples /lami3.png)  
 
 
-![lami8.png](lami8.png)  
+![lami4.png](regular_examples /lami4.png)  
 
-![lami9.png](lami9.png)  
+![lami5.png](regular_examples /lami5.png)  
+
+![lami6.png](regular_examples /lami6.png)  
+
+![lami7.png](regular_examples /lami7.png)  
+
+
+![lami8.png](regular_examples /lami8.png)  
+
+![lami9.png](regular_examples /lami9.png)  
 
 ## License
 
