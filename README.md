@@ -21,25 +21,34 @@ pip2 install gmpy --user
 DrawLam.py is designed to be used in Python scripts.  There are
 several sample scripts available in the "examples" directory in the
 source tree.  The simplest possible script for drawing the lamination
-corresponding to the rabbit is given below; it takes ten iterative
-preimages of the (1/7, 2/7) leaf which do not cross the (1/7, 9/14)
-chord.  (The "True" associated with that leaf indicates that preimages
-are to be taken in the [1/7, 9/14) interval and the [9/14, 1/7)
-interval; "False" would give the opposite endpoint arrangement.)
+corresponding to the rabbit is given below; 
 
-    :::python
-    from DrawLam import DrawLam
-    from gmpy import mpq
 
-    L = DrawLam()
-    L.degree = 2
-    L.pullbackscheme = [(mpq(1,7), mpq(9,14), True)]
-    L.filename = "lami2.png"
-    L.start()
-    L.iterative_preimages((mpq(1,7), mpq(2,7)), 10)
-    L.writeout()
+* it takes ten iterative preimages of the (1/7, 2/7) leaf which do not cross the (1/7, 9/14) chord.  
+* The "True" associated with that leaf indicates that preimages are to be taken in the [1/7, 9/14) interval and the [9/14, 1/7) interval; "False" would give the opposite endpoint arrangement.
+
+
+```python
+:::python
+from DrawLam import DrawLam
+from gmpy import mpq
+
+L = DrawLam()
+L.degree = 2
+L.pullbackscheme = [(mpq(1,7), mpq(9,14), True)]
+L.filename = "lami3.png"
+L.start()
+L.iterative_preimages((mpq(1,7), mpq(2,7)), 10)
+L.writeout()
+```
+    
+    
+The resulta is lami3.png
+
+![lami3.png](examples/lami3.png)      
     
 ### examples    
+Original examples
 
 Run from console 
 
@@ -67,7 +76,7 @@ and [pdf file](examples/qml.pdf)
 
 
 ### regular examples
-
+Examples by Adam Majewski ( only small modifications of some of the original examples)
 Run from console 
 
 ```bash
