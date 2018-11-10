@@ -1,13 +1,13 @@
+This is clone of the [original repsitory](https://bitbucket.org/clintonc/drawlam/src/default/) by Clinton Curry 
+
+
 # DrawLam.py
 
-DrawLam.py is a Python library which makes it easy to draw
-laminations, including pullback laminations.  It is capable of
-producing PNG and PDF output.
+DrawLam.py is a Python library which makes it easy to draw laminations, including pullback laminations.  It is capable of producing PNG and PDF output.
 
 ## Prerequisites
 
 This library calls upon [PyCairo][1] and [gmpy][2] for its dark deeds.
-
 
 
 In ubuntu:
@@ -18,18 +18,15 @@ pip2 install gmpy --user
 
 ## Usage
 
-DrawLam.py is designed to be used in Python scripts.  There are
-several sample scripts available in the "examples" directory in the
-source tree.  The simplest possible script for drawing the lamination
+DrawLam.py is designed to be used in Python scripts.  There are several sample scripts available in the "examples" directory in the source tree.  The simplest possible script for drawing the lamination
 corresponding to the rabbit is given below; 
 
-
+lami3.py
 * it takes ten iterative preimages of the (1/7, 2/7) leaf which do not cross the (1/7, 9/14) chord.  
 * The "True" associated with that leaf indicates that preimages are to be taken in the [1/7, 9/14) interval and the [9/14, 1/7) interval; "False" would give the opposite endpoint arrangement.
 
 
 ```python
-:::python
 from DrawLam import DrawLam
 from gmpy import mpq
 
@@ -46,6 +43,10 @@ L.writeout()
 The resulta is lami3.png
 
 ![lami3.png](examples/lami3.png)      
+
+
+
+
     
 ### examples    
 Original examples
@@ -76,13 +77,23 @@ and [pdf file](examples/qml.pdf)
 
 
 ### regular examples
-Examples by Adam Majewski ( only small modifications of some of the original examples)
+
+Description and examples not by original author but by Adam Majewski ( only small modifications of some of the original examples)
+
+[Quadratic invariant laminations](https://arxiv.org/abs/1707.05384) and:
+* corresponding Julia sets for complex quadratic polynomial ( to show the landing pattern of external rays and structure of Julia set )
+* dynamics of angle doubling map
+
+
 Run from console 
 
 ```bash
 cd regular_examples 
 python lami2.py
 ```
+
+
+
 
 
 ![lami2.png](regular_examples/lami2.png)  
@@ -101,6 +112,92 @@ python lami2.py
 ![lami8.png](regular_examples/lami8.png)  
 
 ![lami9.png](regular_examples/lami9.png)  
+
+
+### period 2
+
+
+![lami2.png](regular_examples/lami2.png)  
+![period2.png](regular_examples/period2.png)  
+
+
+```python
+# lami_2.py
+# python lami_2.py
+# As simply as possible, draw the lamination for period p
+
+import sys
+sys.path.append("..")
+import DrawLam
+from gmpy import mpq, version , gmp_version
+
+
+# info 
+print "Python version" 
+print (sys.version) #parentheses necessary in python 3.  
+ver = version()
+print " gmpy version " 
+print ver
+
+
+gmp_ver = gmp_version() 
+print "gmp version "
+print gmp_ver
+
+
+p = 2
+print "period p = %d"% p
+d = (2**p)-1
+print "denominator d = %d"% d
+depth = 10
+
+
+L = DrawLam.DrawLam()
+L.degree = 2
+a1 = mpq(1,d)
+a2 = mpq(1,d)+mpq(1,2)
+
+MinorLeaf = (a1, mpq(2,d))
+print "Minor Leaf :"
+print MinorLeaf
+
+MajorLeaf = (a1, a2) 
+print "Major Leaf: "
+print(MajorLeaf)
+
+
+L.pullbackscheme = [(a1, a2, True)]
+L.filename = "lami_"+str(p)+".png"
+
+
+L.start()
+print "draw preimages of minor leaf for depth %d"% depth
+L.iterative_preimages(MinorLeaf, depth)
+L.writeout()
+```
+
+text output:
+
+```bash
+Python version
+2.7.15rc1 (default, Apr 15 2018, 21:51:34) 
+[GCC 7.3.0]
+ gmpy version 
+1.17
+gmp version 
+6.1.1
+period p = 2
+denominator d = 3
+Minor Leaf :
+(mpq(1,3), mpq(2,3))
+Major Leaf: 
+(mpq(1,3), mpq(5,6))
+Lamination data seems valid.
+filetype:  png
+draw preimages of minor leaf for depth 10
+Writing file lami_2.png
+```
+
 
 ## License
 
