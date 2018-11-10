@@ -117,9 +117,18 @@ python lami2.py
 ### period 2
 
 
-![lami2.png](regular_examples/lami2.png)  
+External rays 1/3 and 2/3 
+* on the parameter plane = angles of the wake
+* on the dynamic plane land on the fixed point
+
+
 ![period2.png](regular_examples/period2.png)  
 
+Basilica lamination
+![lami2.png](regular_examples/lami2.png)  
+
+
+Code:
 
 ```python
 # lami_2.py
