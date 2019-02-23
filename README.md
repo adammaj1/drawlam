@@ -217,6 +217,106 @@ the central region and the large region to the right of the central region has e
 the removal of a pinch point will separate the Julia set into two or more pieces.
 >>>
 
+### Period 3 
+
+![lami3.png](examples/lami3.png)  
+
+
+
+
+```python
+# lami_3.py
+# python lami_3.py
+# As simply as possible, draw the lamination for period p
+
+import sys
+sys.path.append("..")
+import DrawLam
+from gmpy import mpq, version , gmp_version
+
+
+# info 
+print "Python version" 
+print (sys.version) #parentheses necessary in python 3.  
+ver = version()
+print " gmpy version " 
+print ver
+
+
+gmp_ver = gmp_version()
+print "gmp version "
+print gmp_ver
+
+
+p = 3
+print "period p = %d"% p
+d = (2**p)-1
+print "denominator d = %d"% d
+depth = 10
+
+
+L = DrawLam.DrawLam()
+L.degree = 2
+a1 = mpq(1,d)
+a2 = mpq(1,d)+mpq(1,2)
+
+MinorLeaf = (a1, mpq(2,d))
+print "Minor Leaf :"
+print MinorLeaf
+
+MajorLeaf = (a1, a2) 
+print "Major Leaf: "
+print(MajorLeaf)
+
+
+L.pullbackscheme = [(a1, a2, True)]
+L.filename = "lami_"+str(p)+".png"
+
+
+L.start()
+print "draw preimages of minor leaf for depth %d"% depth
+L.iterative_preimages(MinorLeaf, depth)
+L.writeout()
+
+
+
+
+
+```
+
+
+
+
+run : 
+
+```bash
+python lami_3.py
+```
+
+text output:
+
+```bash
+Python version
+2.7.15rc1 (default, Nov 12 2018, 14:31:15) 
+[GCC 7.3.0]
+ gmpy version 
+1.17
+gmp version 
+6.1.1
+period p = 3
+denominator d = 7
+Minor Leaf :
+(mpq(1,7), mpq(2,7))
+Major Leaf: 
+(mpq(1,7), mpq(9,14))
+Lamination data seems valid.
+filetype:  png
+draw preimages of minor leaf for depth 10
+Writing file lami_3.png
+```
+
+
+
 
 
 # License
