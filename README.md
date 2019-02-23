@@ -207,11 +207,16 @@ draw preimages of minor leaf for depth 10
 Writing file lami_2.png
 ```
 
+Description by Will Smith in [Thompson-Like Groups for Dendrite Julia Sets](http://faculty.bard.edu/belk/projects/WillSmith.pdf): 
+>>>
+We see that the pinch points for the Basilica are points that have external rays at angles   
+that are rational numbers of the form $`\frac{3k - 1}{3·2^n}`$ and $`\frac{3k + 1}{3·2^n }`$ for some $`k, n ∈ N`$.   
+    
+In particular, the pinch point between the central interior region and the large region to the left of the central region has external rays at 1/3 and 2/3, and the pinch point between
+the central region and the large region to the right of the central region has external rays at 5/6 and 1/6. Also observe the intuitive reason that pinch points are so named; 
+the removal of a pinch point will separate the Julia set into two or more pieces.
+>>>
 
->>>
-We see that the pinch points for the Basilica are points that have external rays at angles that are rational numbers of the form
-$`\frac{3k - 1}{3·2^n}`$ and $`\frac{3k + 1}{3·2^n }`$ for some $`k, n ∈ N`$. 
->>>
 
 
 # License
