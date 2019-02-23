@@ -208,7 +208,19 @@ Writing file lami_2.png
 ```
 
 
-## License
+
+We see that the pinch points for the Basilica are points that have external rays at angles that are rational numbers of the form
+3k − 1
+3 · 2
+n
+and 3k + 1
+3 · 2
+n
+for some k, n ∈ N.
+
+
+
+# License
 
 Copyright (c) 2012, Clinton Curry
 All rights reserved.
@@ -238,3 +250,35 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 [1]: http://cairographics.org/pycairo/
 [2]: http://code.google.com/p/gmpy/
+
+
+
+
+# Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
+
+
+# technical notes
+GitLab uses:
+* the Redcarpet Ruby library for [Markdown processing](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md)
+* KaTeX to render [math written with the LaTeX syntax](https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/user/markdown.md), but [only subset](https://khan.github.io/KaTeX/function-support.html)
+
+
+
+
+## Git
+```
+cd existing_folder
+git init
+git remote add origin git@gitlab.com:adammajewski/drawlam.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+```
+
+
+
