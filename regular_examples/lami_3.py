@@ -1,5 +1,5 @@
-# lami_2.py
-# python lami_2.py
+# lami_3.py
+# python lami_3.py
 # As simply as possible, draw the lamination for period p
 
 import sys
@@ -21,7 +21,7 @@ print "gmp version "
 print gmp_ver
 
 
-p = 2
+p = 3
 print "period p = %d"% p
 d = (2**p)-1
 print "denominator d = %d"% d
@@ -47,7 +47,7 @@ L.filename = "lami_"+str(p)+".png"
 
 
 L.start()
-print "draw preimages of Minor Leaf for depth %d which do not cross the Major Leaf"% depth
+print "draw preimages of minor leaf for depth %d which do not cross the Major Leaf"% depth
 L.iterative_preimages(MinorLeaf, depth)
 L.writeout()
 
