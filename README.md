@@ -234,11 +234,13 @@ Usual image :
 
 Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
 
-![/examples/lami2.png](examples/lami2.png)  
+![examples/lami2.png](examples/lami2.png)  
 
 
 
+Image with gaps: 
 
+![examples/lami5.png](examples/lami5.png)
 
 
 code from [regular_examples/lami_3.py](regular_examples/lami_3.py) which draws [regular_examples/lami_3.png](regular_examples/lami_3.png) image 
