@@ -115,10 +115,10 @@ python lami2.py
 
 
 ### period 2
-
+$` L_{1/3}`$ : Lamination of unit circle which correspond to lamination of the dynamic plane for Basilica Julia set 
 
 External rays 1/3 and 2/3 
-* on the parameter plane = angles of the wake
+* on the parameter plane = angles of the wake 1/2
 * on the dynamic plane land on the fixed point
 
 
@@ -220,16 +220,24 @@ the removal of a pinch point will separate the Julia set into two or more pieces
 ### Period 3 
 
 
-$` L_{1/7}`$ : Lamination of unit circle which correspond to lamination of dynamic plane for Rabbit Julia set 
+$` L_{1/7}`$ : Lamination of unit circle which correspond to lamination of the dynamic plane for Rabbit Julia set   
+
+External rays 1/7 and 2/7 
+* on the parameter plane = angles of the wake 1/3
+* on the dynamic plane land on the fixed point 
+
 
 Usual image : 
 
 ![lami3.png](examples/lami3.png)  
 
 
-Image with major ( red dased line) and minor leaf ( solid blac line ) marked  
+Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
 
 ![/examples/lami2.png](examples/lami2.png)  
+
+
+
 
 
 
