@@ -133,6 +133,15 @@ Basilica lamination
 ![lami2.png](regular_examples/lami2.png)  
 
 
+
+Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
+
+![regular_examples/lami_2_.png](regular_examples/lami_2_.png)  
+  
+It can be created with :
+* [lami_2_.py](regular_examples/lami_2_.py) from regular_examples subdirectory
+
+
 Code:
 
 ```python
@@ -237,21 +246,26 @@ Usual image :
 ![lami3.png](examples/lami3.png)  
 
 It can be created with :
-* [lami3.py](examples/lami3.png) from examples subdirectory
+* [lami3.py](examples/lami3.py) from examples subdirectory
 * [lami3.py](regular_examples/lami3.py) from regular_examples subdirectory
 * [lami_3.py](regular_examples/lami_3.py) from regular_examples subdirectory
 
 Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
 
 ![examples/lami2.png](examples/lami2.png)  
-
+  
+It can be created with :
+* [lami2.py](examples/lami2.py) from examples subdirectory
 
 
 Image with shaded gaps: 
 
 ![examples/lami5.png](examples/lami5.png)
 
-Here gap is a space between 3 connected which form curvilinear triangle. This gag correspond to the tri-accesible point ( cut point of order 3)  on the dynamical plane
+It can be created with :
+* [lami5.py](examples/lami5.py) from examples subdirectory
+
+Here gap is a space between 3 connected which form curvilinear triangle. This gap correspond to the tri-accesible point ( cut point of order 3)  on the dynamical plane
 
 
 code from [regular_examples/lami_3.py](regular_examples/lami_3.py) which draws [regular_examples/lami_3.png](regular_examples/lami_3.png) image 
