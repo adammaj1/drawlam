@@ -219,11 +219,21 @@ the removal of a pinch point will separate the Julia set into two or more pieces
 
 ### Period 3 
 
+
+$` L_{1/7}`$ : Lamination of unit circle which correspond to lamination of dynamic plane for Rabbit Julia set 
+
+Usual image : 
+
 ![lami3.png](examples/lami3.png)  
 
 
+Image with major ( red dased line) and minor leaf ( solid blac line ) marked  
+
+![/examples/lami2.png](examples/lami2.png)  
 
 
+
+code from [regular_examples/lami_3.py](regular_examples/lami_3.py) which draws [regular_examples/lami_3.png](regular_examples/lami_3.png) image 
 ```python
 # lami_3.py
 # python lami_3.py
