@@ -80,12 +80,17 @@ and [pdf file](examples/qml.pdf)
 
 Description and examples not by original author but by Adam Majewski ( only small modifications of some of the original examples)
 
-[Quadratic invariant laminations](https://arxiv.org/abs/1707.05384) and:
-* corresponding Julia sets for complex quadratic polynomial ( to show the landing pattern of external rays and structure of Julia set )
+[Quadratic invariant laminations](https://arxiv.org/abs/1707.05384) of unit disk and:
+* coresponding Julia sets for complex quadratic polynomial ( to show the landing pattern of external rays and structure of Julia set )
 * dynamics of angle doubling map
 
 
-Run from console 
+
+These images show laminations associated with period n components on the boundary of main cardioid.
+ 
+
+
+To create images run from console: 
 
 ```bash
 cd regular_examples 
@@ -231,6 +236,10 @@ Usual image :
 
 ![lami3.png](examples/lami3.png)  
 
+It can be created with :
+* [lami3.py](examples/lami3.png) from examples subdirectory
+* [lami3.py](regular_examples/lami3.py) from regular_examples subdirectory
+* [lami_3.py](regular_examples/lami_3.py) from regular_examples subdirectory
 
 Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
 
@@ -238,9 +247,11 @@ Image with major ( red dashed line) and minor leaf ( solid blac line ) marked
 
 
 
-Image with gaps: 
+Image with shaded gaps: 
 
 ![examples/lami5.png](examples/lami5.png)
+
+Here gap is a space between 3 connected which form curvilinear triangle. This gag correspond to the tri-accesible point ( cut point of order 3)  on the dynamical plane
 
 
 code from [regular_examples/lami_3.py](regular_examples/lami_3.py) which draws [regular_examples/lami_3.png](regular_examples/lami_3.png) image 
