@@ -119,12 +119,22 @@ python lami2.py
 ![lami9.png](regular_examples/lami9.png)  
 
 
+Algorithm
+* start with period p 
+* compute denominator d: $`d = 2^p -1`$
+* 
+
+
+
 ### period 2
-$` L_{1/3}`$ : Lamination of unit circle which correspond to lamination of the dynamic plane for Basilica Julia set 
+$` L_{1/3}`$ : Lamination of unit circle which correspond to lamination of the dynamic plane for Basilica Julia set.
+
+ 
 
 External rays 1/3 and 2/3 
 * on the parameter plane = angles of the wake 1/2
 * on the dynamic plane land on the fixed point
+
 
 
 ![period2.png](regular_examples/period2.png)  
@@ -132,6 +142,7 @@ External rays 1/3 and 2/3
 Basilica lamination
 ![lami2.png](regular_examples/lami2.png)  
 
+The Basilica Julia set has only one kind of pinch point ( cut points): biaccesible.
 
 
 Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
@@ -146,7 +157,7 @@ Code:
 
 ```python
 # lami_2.py
-# python lami_2.py
+# python lami_2.py > lami2.txt
 # As simply as possible, draw the lamination for period p
 
 import sys
@@ -239,6 +250,8 @@ $` L_{1/7}`$ : Lamination of unit circle which correspond to lamination of the d
 External rays 1/7 and 2/7 
 * on the parameter plane = angles of the wake 1/3
 * on the dynamic plane land on the fixed point 
+
+The Rabbit Julia set has only one kind of pinch point ( cut points): biaccesible.
 
 
 Usual image : 

@@ -1,6 +1,11 @@
-from gmpy import mpq, mpz
+from __future__ import print_function # https://stackoverflow.com/questions/15769246/pythonic-way-to-print-list-items
+from gmpy import mpq #, mpz
 import math
 import cairo
+
+# in python 3 The print statement has been replaced with a print() function, with keyword arguments to replace most of the special syntax of the old print statement (PEP 3105)
+
+
 
 class DrawLam:
     filename = None
@@ -31,24 +36,24 @@ class DrawLam:
         
         launch = True
         if self.filename==None:
-            print "Set a filename (like out.png or rabbit.pdf)"
+            print ("Set a filename (like out.png or rabbit.pdf)")
             launch = False
         if self.dynamical and self.pullbackscheme==None:
-            print "Set a pullbackscheme."
+            print ("Set a pullbackscheme.")
             launch = False
         if self.dynamical and self.degree==None:
-            print "Set your degree."
+            print ("Set your degree.")
             launch = False
             
         if self.dynamical and len(self.pullbackscheme)!=self.degree-1:
-            print "ERROR. degree is", self.degree, 
-            print "while your pullback scheme has",
-            print len(self.pullbackscheme), "elements."
+            print ("ERROR. degree is", self.degree), 
+            print ("while your pullback scheme has"),
+            print (len(self.pullbackscheme), "elements.")
             launch = False
         if not launch:
             quit()
         else:
-            print "Lamination data seems valid."
+            print ("Lamination data seems valid.")
 
     def key(self, point):
         """Provide unlinkedness sorting for points.
@@ -89,6 +94,7 @@ class DrawLam:
 
         # Chunk!  Divide the list p into sublists of length n
         s = [ p[i:i+n] for i in range(0, len(p), n)]
+        print(*s, sep='\n') # 
         return s
 
     def iterative_preimages(self, simplex, depth):
@@ -97,6 +103,7 @@ class DrawLam:
         if(depth > 0):
             for i in self.preimages(simplex):
                 self.iterative_preimages(i, depth-1)
+                
 
     ## Now, drawing functions
     def start(self):
@@ -109,7 +116,7 @@ class DrawLam:
 
         self.validate_lamination_data()
         self.filetype = self.filename[-3:].lower()
-        print "filetype: ", self.filetype
+        print ("filetype: ", self.filetype)
 
         if self.filetype=="png":
             self.surface = cairo.ImageSurface(cairo.FORMAT_RGB24, 
@@ -118,7 +125,7 @@ class DrawLam:
             self.surface = cairo.PDFSurface(self.filename, 
                                             self.width, self.height)
         else:
-            print "Cannot recognize extension \"", self.filetype, "\""
+            print ("Cannot recognize extension \"", self.filetype, "\"")
             quit()
     
         # Make drawing surface have coordinates ranging from -1 to 1,
@@ -156,6 +163,7 @@ class DrawLam:
     def makeanddrawleaf(self, p,q, r, s):
         """Draw a leaf with provided (rational) endpoints."""
         leaf = (mpq(p,q), mpq(r,s))
+        print ("leaf from %d/%d to %d/%d"%p %q %r %s)
         self.draw(leaf)
 
     def draw(self,simplex):
@@ -200,9 +208,9 @@ class DrawLam:
             self.ctx.stroke()
         
         if self.filetype=="png":
-            print "Writing png"
+            print ("Writing file %s"%self.filename)
             self.surface.write_to_png(self.filename)
         else:
             self.surface.finish()
-            print "Saving context"
+            print ("Saving context")
             self.ctx.save()
