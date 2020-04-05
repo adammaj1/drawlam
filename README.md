@@ -232,6 +232,10 @@ draw preimages of minor leaf for depth 10
 Writing file lami_2.png
 ```
 
+See also :
+* [lami2.txt](./regular_examples/lami2.txt) - new text output with all angles 
+
+
 Description by Will Smith in [Thompson-Like Groups for Dendrite Julia Sets](http://faculty.bard.edu/belk/projects/WillSmith.pdf): 
 >>>
 We see that the pinch points for the Basilica are points that have external rays at angles   
@@ -436,6 +440,10 @@ git commit -m "Initial commit"
 git push -u origin master
 
 ```
+
+local repo: :~/python/clintonc-drawlam 
+
+
 
 
 
