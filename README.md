@@ -1,6 +1,13 @@
 This is clone of the [original repsitory](https://bitbucket.org/clintonc/drawlam/src/default/) by Clinton Curry 
 
 
+# TOC
+* DrawLam.py
+
+
+
+
+
 # DrawLam.py
 
 DrawLam.py is a Python library which makes it easy to draw laminations, including pullback laminations.  It is capable of producing PNG and PDF output.
@@ -48,8 +55,10 @@ The resulta is lami3.png
 
 
     
-### examples    
-Original examples
+# examples    
+
+
+## Original examples
 
 Run from console 
 
@@ -76,7 +85,7 @@ and [pdf file](examples/qml.pdf)
 
 
 
-### regular examples
+## Quadratic invariant laminations 
 
 Description and examples not by original author but by Adam Majewski ( only small modifications of some of the original examples)
 
@@ -142,10 +151,10 @@ External rays 1/3 and 2/3
 Basilica lamination
 ![lami2.png](regular_examples/lami2.png)  
 
-The Basilica Julia set has only one kind of pinch point ( cut points): biaccesible.
+The Basilica Julia set has only one kind of pinch point ( cut points): biaccesible = 2 external rays land on each cut point.
 
 
-Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
+Image with major ( red dashed line) and minor leaf ( solid black line ) marked  
 
 ![regular_examples/lami_2_.png](regular_examples/lami_2_.png)  
   
@@ -255,7 +264,7 @@ External rays 1/7 and 2/7
 * on the parameter plane = angles of the wake 1/3
 * on the dynamic plane land on the fixed point 
 
-The Rabbit Julia set has only one kind of pinch point ( cut points): biaccesible.
+The Rabbit Julia set has only one kind of pinch point ( cut points) of order 3: triaccesible = 3 external rays land on each cut point.
 
 
 Usual image : 
@@ -267,7 +276,7 @@ It can be created with :
 * [lami3.py](regular_examples/lami3.py) from regular_examples subdirectory
 * [lami_3.py](regular_examples/lami_3.py) from regular_examples subdirectory
 
-Image with major ( red dashed line) and minor leaf ( solid blac line ) marked  
+Image with major ( red dashed line) and minor leaf ( solid black line ) marked  
 
 ![examples/lami2.png](examples/lami2.png)  
   
@@ -377,8 +386,8 @@ draw preimages of minor leaf for depth 10
 Writing file lami_3.png
 ```
 
-
-
+## Dendritic laminations
+* [Lamination for z2 + i from galley by Curtis T McMullen](http://people.math.harvard.edu/~ctm/gallery/julia/lam.gif)
 
 
 # License
